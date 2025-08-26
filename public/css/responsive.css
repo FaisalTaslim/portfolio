@@ -1,0 +1,271 @@
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: fit-content;
+        align-items: unset;
+        padding: 0.5rem;
+        gap: 2rem;
+        justify-content: unset;
+    }
+    main {align-items: center;}
+    .shortIntro {
+        flex-direction: column;
+        align-items: unset;
+        gap: 0.4rem;
+    }
+    .about-me {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .profile-card {
+        height: 26rem;
+        width: 99% !important;
+    }
+    .block-1, .block-2 {height: 29rem;}
+    .about-text {max-width: unset;}
+    .about-me, .block-1, .block-2 {
+        justify-content: unset;
+        width: 97%;
+    }
+    .skills, .projects {
+        height: fit-content;
+        width: 97%;
+    }
+    .tech-lists, .projects-list {
+        width: 94%;
+        flex-direction: column;
+    }
+    .web-techs, .other-techs, .soft-skills, .attend-smart, .portfolio {
+        width: 100%;
+        border: unset;
+    }
+    .skills > h1, .projects > h1, .certifications > h1{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .tech-box {
+        justify-content: center;
+        align-items: center;
+    }
+    .descriptions, .list-item {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .projects-list {
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .attend-smart, .portfolio {
+        padding: unset;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .attend-smart {
+        border-bottom: 2px solid var(--border-color);
+    }
+    .certificates {
+        height: 17rem;
+        width: 100%;
+    }
+    .foot-content {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        gap: 1.5rem;
+    }
+    .foot1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .foot2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .foot-links {text-decoration: none;}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    main {align-items: center;}
+    .about-me {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .profile-card {
+        height: 26rem;
+        width: 99%;
+    }
+    .block-1, .block-2 {height: 29rem;}
+    .about-text {max-width: unset;}
+    .about-me, .block-1, .block-2 {
+        justify-content: unset;
+        width: 97%;
+    }
+    .skills, .projects {
+        height: fit-content;
+        width: 97%;
+    }
+    .tech-lists, .projects-list {
+        width: 94%;
+        flex-direction: column;
+    }
+    .web-techs, .other-techs, .soft-skills, .attend-smart, .portfolio {
+        width: 100%;
+        border: unset;
+    }
+    .tech-box {
+        justify-content: center;
+        align-items: center;
+    }
+    .descriptions, .list-item {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .projects-list {
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .attend-smart, .portfolio {
+        padding: unset;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .attend-smart {
+        border-bottom: 2px solid var(--border-color);
+    }
+    .certificates {
+        height: 27rem;
+        width: 100%;
+    }
+    .foot-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 98%;
+    }
+    .foot1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .foot2 {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .foot-content > * {font-size: 18px;}
+    .foot-links {text-decoration: none;}
+}
+
+
+@media screen and (max-width: 550px) and (max-height: 750px) {
+header {
+        flex-direction: column;
+        height: fit-content;
+        align-items: unset;
+        padding: 0.5rem;
+        gap: 2rem;
+        justify-content: unset;
+    }
+    main {align-items: center;}
+    .shortIntro {
+        flex-direction: column;
+        align-items: unset;
+        gap: 0.4rem;
+    }
+    .about-me {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .block-1 {align-items: center;}
+    .profile-card {
+        height: 26rem;
+        width:78%;
+    }
+    .block-1, .block-2 {height: 29rem;}
+    .about-text {max-width: unset;}
+    .about-me, .block-1, .block-2 {
+        justify-content: unset;
+        width: 97%;
+    }
+    .skills, .projects {
+        height: fit-content;
+        width: 97%;
+    }
+    .tech-lists, .projects-list {
+        width: 94%;
+        flex-direction: column;
+    }
+    .web-techs, .other-techs, .soft-skills, .attend-smart, .portfolio {
+        width: 100%;
+        border: unset;
+    }
+    .tech-box {
+        justify-content: center;
+        align-items: center;
+    }
+    .descriptions, .list-item {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .projects-list {
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .attend-smart, .portfolio {
+        padding: unset;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .attend-smart {
+        border-bottom: 2px solid var(--border-color);
+    }
+    .certificates {
+        height: 17rem;
+        width: 100%;
+    }
+    .foot-content {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        gap: 1.5rem;
+    }
+    .foot1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .foot2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .foot-links {text-decoration: none;}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) and (min-height: 750px) and (max-height: 850px) {
+    .skills {
+        height: 38rem;
+    }
+    .tech-lists {width: 95%;}
+    .web-techs, .other-techs {width: 36%}
+    .soft-skills {width: 28%;}
+    .projects {height: 36rem;}
+    .projects-list {
+        width: 96%;
+        gap: 0.8rem;
+    }
+    .foot-content {width: 78%;}
+}
+@media screen and (min-width: 950px) and (max-width: 1024px) and 
+       (min-height: 580px) and (max-height: 620px)  {
+        header {
+            flex-direction: row;
+            height: 5rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .shortIntro {flex-direction: row;}
+       }
