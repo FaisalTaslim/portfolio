@@ -210,6 +210,7 @@ main {
     border-radius: 0.8rem;
     padding: 1rem;
 }
+.projects-list {gap: 1rem;}
 .web-techs, .other-techs {
     display: flex;
     flex-direction: row;
