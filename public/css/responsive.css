@@ -42,7 +42,7 @@
     .tech-lists, .projects-list {
         width: 94%;
         flex-direction: column;
-        padding: 0.8rem;
+        padding: 0.5rem;
     }
     .web-techs, .other-techs, .soft-skills, .attend-smart, .portfolio {
         width: 100%;
@@ -72,10 +72,8 @@
     .attend-smart {
         border-bottom: 2px solid var(--border-color);
     }
-    .certificates {
-        height: 17rem;
-        width: 100%;
-    }
+    .certificates-img {flex-direction: column;}
+    .certificates {width: 100%;}
     .foot-content {
         display: flex;
         flex-direction: column;
@@ -111,6 +109,13 @@
         justify-content: unset;
         width: 97%;
     }
+    .nav-links > i, 
+    .dark-theme > i, 
+    .light-theme > i, 
+    .address-book-icon > i 
+    {
+        color: var(--text-primary)
+    }
     .skills, .projects {
         height: fit-content;
         width: 97%;
@@ -143,10 +148,8 @@
     .attend-smart {
         border-bottom: 2px solid var(--border-color);
     }
-    .certificates {
-        height: 27rem;
-        width: 100%;
-    }
+    .certificates-img {flex-direction: column;}
+    .certificates {width: 100%;}
     .foot-content {
         display: flex;
         flex-direction: column;
@@ -194,6 +197,13 @@
         width:78%;
     }
     .block-1, .block-2 {height: 29rem;}
+    .nav-links > i, 
+    .dark-theme > i, 
+    .light-theme > i, 
+    .address-book-icon > i 
+    {
+        color: var(--text-primary)
+    }
     .about-text {max-width: unset;}
     .about-me, .block-1, .block-2 {
         justify-content: unset;
@@ -202,7 +212,7 @@
     .skills, .projects {
         height: fit-content;
         width: 97%;
-        padding: 1rem;
+        padding: 0.5rem;
     }
     .tech-lists, .projects-list {
         width: 94%;
@@ -232,10 +242,8 @@
     .attend-smart {
         border-bottom: 2px solid var(--border-color);
     }
-    .certificates {
-        height: 17rem;
-        width: 100%;
-    }
+    .certificates-img {flex-direction: column;}
+    .certificates {width: 100%;}
     .foot-content {
         display: flex;
         flex-direction: column;
