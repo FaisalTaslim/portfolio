@@ -7,7 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/responsive.css">
-    <link rel="stylesheet" href="public/css/light-theme.css">
+    <link rel="stylesheet" href="public/css/light-theme.css" class="theme">
     <script src="https://kit.fontawesome.com/f75c66b724.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,18 @@
             <h3 id="job-role">&nbsp; Aspiring Full Stack Developer</h3>
         </div>
         <div class="nav-links">
-            <a href="#" class="links">View Resume</a>
-            <a href="#" class="links">Contact Me</a>
+            <p class="dark-theme">
+                <i class="fa-solid fa-cloud-sun"></i>
+            </p>
+            <p class="light-theme">
+                <i class="fa-regular fa-sun"></i>
+            </p>
+            <a href="#footer" class="address-book-icon"><i class="fa-solid fa-address-book"></i></a>
+            <a href="public/pdf/resume.pdf" class="links" target="_blank">Resume</a>
         </div>
     </header>
     <main>
-        <div class="about-me">
+        <div class="about-me" id="about">
             <div class="block-1">
                 <div class="profile-card">
                     <div class="profile-pic-container">
@@ -49,8 +55,8 @@
                 <h1 class="about-hello">Hello!</h1>
                 <h2 class="about-subtitle">Here's who I am & what I do</h2>
                 <div class="about-links">
-                    <a href="#" class="links">Skills</a>
-                    <a href="#" class="links">Projects</a>
+                    <a href="#skills" class="links">Skills</a>
+                    <a href="#projects" class="links">Projects</a>
                 </div>
                 <p class="about-text">
                     Hey, I’m a final-year B.Tech CSE student who loves working on Full Stack Web Development. I enjoy
@@ -60,7 +66,7 @@
                 </p>
             </div>
         </div>
-        <div class="skills">
+        <div class="skills" id="skills">
             <h1>SKILLS & TECHNOLOGIES</h1>
             <div class="tech-lists">
                 <div class="web-techs">
@@ -145,18 +151,18 @@
                     <div class="tech-box">
                         <p><i class="fa-brands fa-python"></i></p>
                         <div class="name-and-bar">
-                            <p>Python - 30%</p>
+                            <p>Python - 50%</p>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 30%"></div>
+                                <div class="progress" style="width: 50%"></div>
                             </div>
                         </div>
                     </div>
                     <div class="tech-box">
                         <p><i class="fa-solid fa-layer-group"></i></p>
                         <div class="name-and-bar">
-                            <p>Data Structures - 20%</p>
+                            <p>Data Structures - 60%</p>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 20%"></div>
+                                <div class="progress" style="width: 60%"></div>
                             </div>
                         </div>
                     </div>
@@ -194,7 +200,7 @@
                 </div>
             </div>
         </div>
-        <div class="projects">
+        <div class="projects" id="projects">
             <h1>BUILT WITH ❤️ AND JAVASCRIPT</h1>
             <div class="projects-list">
                 <div class="attend-smart">
@@ -275,22 +281,22 @@
                 </div>
             </div>
         </div>
-        <div class="certifications">
+        <div class="certifications" id="certifications">
             <h1>MY OTHER CERTIFICATIONS</h1>
             <img src="public/img/python-certificate.jpg" alt="" class="certificates">
             <img src="public/img/dataStructures-certificate.jpg" alt="" class="certificates">
         </div>
     </main>
-    <footer>
+    <footer id="footer">
 
         <div class="foot-content">
             <div class="foot1">
                 <div class="useful-links">
                     <p><strong>Useful-links</strong></p>
-                    <a href="#" class="foot-links" target="_blank">About</a>
-                    <a href="#" class="foot-links" target="_blank">Skills</a>
-                    <a href="#" class="foot-links" target="_blank">Projects</a>
-                    <a href="#" class="foot-links" target="_blank">Certifications</a>
+                    <a href="#about" class="foot-links" target="_blank">About</a>
+                    <a href="#skills" class="foot-links" target="_blank">Skills</a>
+                    <a href="#projects" class="foot-links" target="_blank">Projects</a>
+                    <a href="#certifications" class="foot-links" target="_blank">Certifications</a>
                 </div>
                 <div class="legal">
                     <p><strong>Legal</strong></p>
@@ -309,8 +315,8 @@
                 </div>
                 <div class="contacts">
                     <p><strong>Contacts</strong></p>
-                    <a href="tel:+917449925137"><i class="fa-solid fa-phone"></i> | +91 7449925137</a>
-                    <a href="mailto:faisaltaslim79@gmail.com"><i class="fa-solid fa-envelope"></i> |
+                    <a href="tel:+917449925137" class="foot-links"><i class="fa-solid fa-phone"></i> | +91 7449925137</a>
+                    <a href="mailto:faisaltaslim79@gmail.com" class="foot-links"><i class="fa-solid fa-envelope"></i> |
                         faisaltaslim79@gmail.com</a>
                 </div>
             </div>
@@ -319,6 +325,22 @@
     </footer>
     <script src="public/javascript/job-role.js"></script>
     <script src="public/javascript/update-footer-for=tablets.js"></script>
+    <script src="public/javascript/change-theme.js"></script>
+    <script>
+        const footer = document.getElementById("footer");
+        const address_book = document.querySelector(".fa-address-book");
+        const getContacts = document.querySelector(".contacts");
+
+        address_book.addEventListener("click", () => {
+            getContacts.style.transition = "background-color 0.5s ease"; 
+            getContacts.style.backgroundColor="#A0A0AA";
+            getContacts.style.borderRadius="0.8rem";
+
+            setTimeout(() => {
+                getContacts.style.backgroundColor="";
+            }, 2000);
+        });
+    </script>
 </body>
 
 </html>

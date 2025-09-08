@@ -1,0 +1,22 @@
+:root {
+    --bg-primary: #1E1E2E;
+    --bg-secondary: #2A2A3C;
+    --bg-card: #2F2F41;
+
+    --text-primary: #EDEDED;
+    --text-secondary: #C7C7D1;
+    --text-muted: #A0A0AA;
+
+    --accent: #3B82F6;
+    --accent-hover: #60A5FA;
+
+    --link: #FF6B6B;
+    --link-hover: #FF8A7A;
+
+    --border-color: #3E3E4D;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+        0 6px 10px rgba(0, 0, 0, 0.25);
+
+    --icon-primary: #E0E0E6;
+}
