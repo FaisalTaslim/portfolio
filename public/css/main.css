@@ -65,7 +65,7 @@ p, li, h3, h2, h1 {
 .dark-theme > i, 
 .light-theme > i, 
 .address-book-icon > i {
-    color: black;
+    color: var(--text-primary);
     font-size: 1.2rem;
     border: 2px solid var(--border-color);
     padding: 0.3rem;
