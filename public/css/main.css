@@ -40,6 +40,7 @@ header > * {
 p, li, h3, h2, h1 {
     color: var(--text-primary);
 }
+ul {margin-left: 1.5rem;}
 .shortIntro {
     display: flex;
     flex-direction: row;
@@ -320,7 +321,7 @@ main {
 .attend-smart {
     border-right: 2px solid var(--border-color);
 }
-.attend-smart > *, .portfolio > * {margin: 0;}
+
 .descriptions, .list-item {font-size: 1.1rem;}
 .projects {height: 40rem;}
 .skills, .projects {
@@ -332,6 +333,11 @@ main {
     gap: 0.5rem;
     width: 21rem;
     flex-wrap: wrap;
+}
+.style-technologies:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    cursor: pointer;
 }
 .technologies-key > * {margin: 0;}
 .style-technologies {
