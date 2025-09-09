@@ -256,7 +256,6 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 33%;
     padding: 1rem;
     gap: 1.2rem;
 }
@@ -264,8 +263,10 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 33%;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
+    gap: 1.2rem;
 }
 .web-techs, .other-techs {
     border-right: 2px solid var(--border-color)

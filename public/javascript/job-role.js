@@ -8,5 +8,5 @@
 
 const job_role = document.getElementById("job-role");
 if (window.innerWidth < 1024) { 
-  job_role.textContent = "Aspiring Full Stack Developer";
+  job_role.textContent = "Aspiring Web Developer";
 }

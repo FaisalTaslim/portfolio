@@ -1,0 +1,18 @@
+:root {
+    --bg-primary: #FFFDF7;
+    --bg-secondary: #FAF4E6;
+    --bg-card: #FFFFFF;
+
+    --text-primary: #2C2C2C;
+    --text-secondary: #5C5C5C;
+    --text-muted: #8A8A8A;
+
+    --accent: #D4A373;
+    --accent-hover: #E6B98C;
+
+    --link: #B07C4F;
+    --link-hover: #E7A977;
+
+    --border-color: #EAE2D6;
+    --icon-primary: #6B4F3F;
+}
