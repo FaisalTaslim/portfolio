@@ -6,7 +6,7 @@ let count = 1;
 dark_theme.style.display = "none";
 
 light_theme.addEventListener("click", () => {
-    if (count < 4) {
+    if (count < 5) {
         theme_link.setAttribute("href", `public/css/themes/light-theme-${count}.css`);
         count++;
     }
