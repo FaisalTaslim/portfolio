@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 17px;
+}
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.25), transparent 40%),
+        var(--gradient-main);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 1rem;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    height: auto;
+    min-height: 90vh;
+    width: 100%;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 1.2rem;
+    overflow: visible;
+}
+.main-1, 
+.main-2,
+.main-3,
+.main-4 {
+    height: fit-content;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-primary);
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.main-2, 
+.main-3,
+.main-4 {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.main-4 {
+    height: 70vh;
+}
+.card {
+    height: 70%;
+    width: 30%;
+    border-right: 1px solid var(--text-muted);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.12), transparent 50%),
+        var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: calc(var(--radius) + 8px);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    align-self: center;
+}
+.card * {
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-bold);
+    font-size: var(--font-smallheading);
+}
+.card-top,
+.card-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-top {
+    justify-content: flex-start;
+}
+.card-bottom {
+    gap: 0.85rem;
+    padding-bottom: 0.5rem;
+}
+.card-pfp {
+    height: 9.5rem;
+    width: 9.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 45%),
+        rgba(255, 255, 255, 0.05);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 4px rgba(255, 255, 255, 0.03);
+}
+.card-name {
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+#card-caption {
+    font-size: var(--font-caption);
+    text-align: center;
+    font-weight: var(--fw-regular);
+    color: var(--text-secondary);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+.card-socials {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    align-items: center;
+}
+.social-link {
+    text-decoration: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.06);
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease,
+        box-shadow 160ms ease;
+}
+.social-link i {
+    font-size: var(--font-caption);
+}
+.social-link:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about-myself {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 1.2rem 1rem 1rem;
+    box-sizing: border-box;;
+}
+.about-myself * {
+    margin: 0;
+}
+#hello-world-text {
+    color: var(--secondary);
+    font-family: var(--font-accent);
+    font-weight: var(--fw-bold);
+}
+#about-myself-caption {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+}
+.gradient-text {
+    background: var(--gradient-text);     
+    -webkit-background-clip: text;       
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;                
+    color: transparent;                   
+}
+.about-myself-main {
+    color: var(--text-secondary);
+    font-size: var(--font-caption);
+    font-weight: var(--fw-regular);
+    font-family: var(--font-body);
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    width: 90%;
+}
+.nav-buttons-in-about-myself {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.nav-buttons-in-about-myself * {
+    font-family: var(--font-body);
+    font-weight: var(--fw-bold);
+    height: fit-content;
+}
+.nav-buttons-in-about-myself p:first-child {
+    color: black;
+}
+.gradient-bg {
+    background: var(--gradient-text);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--font-caption);
+    gap: 0.5rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: var(--shadow-soft), var(--shadow-glow);
+}
+.nav-buttons-in-about-myself p {
+    font-size: var(--font-caption);
+}
+.basic-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    border: 1px solid var(--text-muted);
+    border-radius: var(--radius);
+    background-color: var(--bg-primary);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.stats-section p {
+    font-size: var(--font-paragraph);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+}
+.stats-section p:last-child {
+    font-size: var(--font-caption);
+    font-weight: var(--fw-regular);
+    color: var(--text-muted);
+}
+.main2-heading,
+.main3-heading,
+.main4-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1.5rem;
+    height: fit-content;
+    box-sizing: border-box;
+    align-self: center;
+}
+.main2-heading p:first-child,
+.main3-heading p:first-child,
+.main4-heading p:first-child {
+    font-size: var(--font-smallheading);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    align-self: center;
+
+}
+.main2-heading p:last-child,
+.main3-heading p:last-child,
+.main4-heading p:last-child {
+    width: 40%;
+    font-size: var(--font-caption);
+    font-weight: var(--fw-regular);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    align-self: center;
+}
+.tech-stack,
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.projects {gap: 1rem;}
+.tech-stack-boxes,
+.projects-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 30%;
+    border-radius: var(--radius);
+    border: 2px solid var(--text-muted);
+    background-color: var(--bg-dark);
+}
+.projects-box {width: 50%;}
+.tech-stack-boxes > p:first-child {
+    font-weight: var(--fw-bold);
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+.tech-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tech-items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+.name-and-progressbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+.tech-items i {
+    font-size: 1.2rem;
+    color: var(--highlight);
+    align-self: center;
+}
+.tech-items p {
+    align-self: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+.name-and-progressbar p {
+    width: 100%;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    border: 2px solid var(--text-muted);
+    border-radius: var(--radius);
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+.progress {
+    display: block;        
+    height: 100%;
+    background: var(--gradient-accent);
+    border-radius: inherit;
+    align-self: center;
+}
+.projects-box p:first-child {
+    color: var(--text-primary);
+    font-family: var(--font-accent);
+    font-size: var(--font-caption);
+}
+.projects-box h2 {
+    color: var(--text-primary);
+    font-weight: var(--fw-bold);
+    font-size: var(--font-paragraph);
+    font-family: var(--font-heading)
+}
+.projects-box p {
+    color: var(--text-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--font-caption);
+    font-family: var(--font-body);
+    line-height: 1.3rem;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    gap: 0.5rem;
+}
+ul li {
+    color: var(--text-primary);
+    font-size: var(--font-caption);
+    font-family: var(--font-body);
+    line-height: 1.3rem;
+}
+ul li span {color: var(--highlight)}
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--highlight);
+    cursor: pointer;
+}
+.certificates {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+.certificates img {
+    width: 45%;
+    height: 85%;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+}
