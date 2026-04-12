@@ -44,15 +44,21 @@ footer,
     cursor: pointer;
     color: var(--highlight);
 }
-.footer-box p:first-child {
-    font-size: var(--font-paragraph);
-    font-weight: var(--fw-bold);
-    color: var(--text-primary);
-    font-family: var(--font-heading);
-}
 .copyright {
     font-size: 0.8rem;
     font-weight: var(--fw-regular);
     color: var(--text-muted);
     font-family: var(--font-body);
+}
+.footer-box p:hover {
+    color: var(--highlight);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.footer-box p:first-child {
+    font-size: var(--font-paragraph);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    text-decoration: none;
 }

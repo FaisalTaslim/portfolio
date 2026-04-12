@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="stylesheet/utilities/themes/palette-I.css">
+    <link rel="stylesheet" href="stylesheet/utilities/themes/palette-IV.css">
     <link rel="stylesheet" href="stylesheet/utilities/font-styles/font-size.css">
     <link rel="stylesheet" href="stylesheet/utilities/font-styles/font-family.css">
     <link rel="stylesheet" href="stylesheet/header.css">
@@ -27,21 +27,21 @@
             </div>
         </div>
         <nav class="nav-bar-pc">
-            <p class="nav-links-property"><i class="fa-regular fa-user"></i> About</p>
-            <p class="nav-links-property"><i class="fa-solid fa-code"></i> Skills</p>
-            <p class="nav-links-property"><i class="fa-solid fa-network-wired"></i> Projects</p>
-            <p class="nav-links-property"><i class="fa-solid fa-plus"></i> Certifications</p>
-            <p class="nav-links-property"><i class="fa-regular fa-address-book"></i> Contacts</p>
-            <p class="nav-links-property"><i class="fa-solid fa-download"></i> Resume</p>
+            <p class="nav-links-property about-link"><i class="fa-regular fa-user"></i> About</p>
+            <p class="nav-links-property skills-link"><i class="fa-solid fa-code"></i> Skills</p>
+            <p class="nav-links-property projects-link"><i class="fa-solid fa-network-wired"></i> Projects</p>
+            <p class="nav-links-property certifications-link"><i class="fa-solid fa-plus"></i> Certifications</p>
+            <p class="nav-links-property contacts-link"><i class="fa-regular fa-address-book"></i> Contacts</p>
+            <p class="nav-links-property resume-link"><i class="fa-solid fa-download"></i> Resume</p>
         </nav>
         <nav class="nav-bar-mobile nav-select">
             <select>
-                <option value="About">About</option>
-                <option value="Skills">Skills</option>
-                <option value="Projects">Projects</option>
-                <option value="Certifications">Certifications</option>
-                <option value="Contacts">Contacts</option>
-                <option value="Resume">Resume</option>
+                <option value="About" class="about-link">About</option>
+                <option value="Skills" class="skills-link">Skills</option>
+                <option value="Projects" class="projects-link">Projects</option>
+                <option value="Certifications" class="certifications-link">Certifications</option>
+                <option value="Contacts" class="contacts-link">Contacts</option>
+                <option value="Resume" class="resume-link">Resume</option>
             </select>
         </nav>
     </header>
@@ -49,7 +49,9 @@
         <div class="main-1">
             <div class="card">
                 <div class="card-top">
-                    <div class="card-pfp" aria-label="Profile photo placeholder"></div>
+                    <div class="card-pfp" aria-label="Profile photo placeholder">
+                        <img src="img/my-pic2.jpg" alt="">
+                    </div>
                 </div>
                 <div class="card-bottom">
                     <p class="card-name">Faisal Taslim</p>
@@ -67,20 +69,19 @@
                     </div>
                 </div>
             </div>
-            <div class="about-myself">
-                <p id="hello-world-text">HELLO WORLD,</p>
+            <div class="about-myself" id="about-myself">
+                <p id="hello-world-text">HELLO WORLD</p>
                 <p id="about-myself-caption">
                     I craft <b class="gradient-text">sleek web experiences</b> with clean architecture.
                 </p>
-                <p class="about-myself-main">
-                    I’m a final-year BTech student specializing in web development, passionate about building responsive
-                    and user-friendly applications. Currently, I’m leading AttendSmart, a universal smart attendance
-                    platform, where I tackle practical challenges and collaborate with teams to deliver real solutions.
-                    I love solving problems, refining my skills, and continuously leveling up as a developer.
-                </p>
+                <p class="about-myself-main">Final-year BTech CSE Student</p>
+                <p class="about-myself-main">Web Developer • Problem Solver</p>
+                <p class="about-myself-main">Building AttendSmart — a smart attendance system</p>
+                <p class="about-myself-main">Passionate about clean UI & real-world projects</p>
                 <div class="nav-buttons-in-about-myself">
-                    <p class="nav-links-property gradient-bg"><i class="fa-solid fa-rocket"></i> Explore Projects</p>
-                    <p class="nav-links-property"><i class="fa-solid fa-paper-plane"></i> Contact Me</p>
+                    <p class="nav-links-property gradient-bg projects-link"><i class="fa-solid fa-rocket"></i> Explore
+                        Projects</p>
+                    <p class="nav-links-property contacts-link"><i class="fa-solid fa-paper-plane"></i> Contact Me</p>
                 </div>
                 <div class="basic-stats">
                     <section class="stats-section">
@@ -98,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-2">
+        <div class="main-2" id="main-2">
             <div class="main2-heading">
                 <p class="gradient-text">Skills & Technologies</p>
                 <p>
@@ -202,7 +203,7 @@
                         <p>40%</p>
                     </div>
                     <div class="tech-items">
-                       <i class="fa-solid fa-layer-group"></i>
+                        <i class="fa-solid fa-layer-group"></i>
                         <div class="name-and-progressbar">
                             <p>Data Structures</p>
                             <div class="progress-bar">
@@ -222,7 +223,7 @@
                         <p>--/--</p>
                     </div>
                 </div>
-                 <div class="tech-stack-boxes">
+                <div class="tech-stack-boxes">
                     <p>Professional</p>
                     <div class="tech-items">
                         <i class="fa-solid fa-users"></i>
@@ -257,7 +258,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-3">
+        <div class="main-3" id="main-3">
             <div class="main3-heading">
                 <p class="gradient-text">Projects</p>
                 <p>
@@ -269,37 +270,41 @@
                     <p>JUNE 23, 2025 - PRESENT</p>
                     <h2>AttendSmart - Universal Smart Attendance System</h2>
                     <p>
-                        A web-based attendance platform for school, colleges and companies that uses frontend face-recognition model (face-api.js) to mark and manage attendance for efficient and reliable tracking.
+                        A web-based attendance platform for school, colleges and companies. It uses frontend
+                        face-recognition model (face-api.js) to mark and manage attendance for efficient and reliable
+                        tracking.
                     </p>
                     <ul>
-                        <li>It uses face-recognition to mark attendance for employees and face-recognition + Otp verification for students.</li>
+                        <li>It uses face-recognition to mark attendance for employees and face-recognition + Otp
+                            verification for students.</li>
                         <li>Built responsive UI with HTML, CSS, and Javascript.</li>
                         <li>Designed mongoDB schemas for users, roles, and attendance records.</li>
                         <li>Integrated frontend and backend for a smooth, practical user expeerience.</li>
                     </ul>
-                    <p>Visit 
+                    <p>Visit
                         <a href="https://github.com/FaisalTaslim/AttendSmart">AttendSmart</a> for more details.
                     </p>
                 </div>
-                 <div class="projects-box">
+                <div class="projects-box">
                     <p>JAN 12, 2025 - JAN 15, 2025</p>
                     <h2>My Portfolio</h2>
                     <p>
-                        A responsive personal site showcasing projects, skills and contact details for recruiters, and collaborators to quickly evaluate work and access resume, and source code;
+                        A responsive personal site showcasing projects, skills and contact details for recruiters, and
+                        collaborators to quickly evaluate work and access resume, and source code;
                     </p>
                     <ul>
                         <li>Built with semantic HTML, modular CSS, and Javascript.</li>
                         <li>Included resume download and links to source code and project demos.</li>
                         <li>Built a clean responsive design for easy navigation.</li>
                         <li>Deployed using Github Pages.</li>
-                        <li>Updated on: <span>24 March, 2026</span>: Redesigned portfolio</li>
+                        <li>Redesigned on: <span>24 March, 2026</span></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="main-4">
+        <div class="main-4" id="main-4">
             <div class="main4-heading">
-                <p class="gradient-text">Certificaitons</p>
+                <p class="gradient-text">Certifications</p>
                 <p>
                     Additional credentials that support my programming and computer science fundamentals.
                 </p>
@@ -310,14 +315,14 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="main-footer">
             <div class="footer-box">
                 <p>Navigation Links</p>
-                <p>About</p>
-                <p>Skills</p>
-                <p>Projects</p>
-                <p>Certifications
+                <p class="about-link">About</p>
+                <p class="skills-link">Skills</p>
+                <p class="projects-link">Projects</p>
+                <p class="certifications-link">Certifications
             </div>
             <div class="footer-box">
                 <p>Resume</p>
@@ -339,6 +344,8 @@
         </div>
         <p class="copyright">&copy2026 Faisal Taslim. All Rights Reserved.</p>
     </footer>
+
+    <script src="javascript/redirect.js"></script>
 </body>
 
 </html>

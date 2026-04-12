@@ -1,0 +1,25 @@
+:root {
+    --bg-dark: #000000;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+
+    --primary: #ffffff;
+    --secondary: #9ca3af;
+    --accent: #3b82f6;
+    --highlight: #a855f7;
+
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #6b7280;
+
+    --border: rgba(255, 255, 255, 0.08);
+    --glass: rgba(255, 255, 255, 0.04);
+
+    --gradient-main: linear-gradient(135deg, #000000, #0a0a0a);
+    --gradient-accent: linear-gradient(135deg, #3b82f6, #a855f7);
+    --gradient-text: linear-gradient(90deg, #ffffff, #9ca3af);
+
+    --shadow-glow: 0 0 25px rgba(255, 255, 255, 0.08);
+
+    --radius: 16px;
+}
