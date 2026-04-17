@@ -4,6 +4,8 @@
 }
 html {
     font-size: 17px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 html,
 body {
