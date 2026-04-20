@@ -7,10 +7,32 @@ document.addEventListener("DOMContentLoaded", () => {
         ".contacts-link": "footer",
     };
 
+    const mobileNavSelect = document.querySelector(".nav-bar-mobile select");
+    if (mobileNavSelect) {
+        mobileNavSelect.addEventListener("change", () => {
+            const targetId = mobileNavSelect.value;
+            if (!targetId) return;
+
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+
+            // Let users pick the same destination again (change won't fire if value doesn't change).
+            mobileNavSelect.value = "";
+        });
+    }
+
     Object.keys(map_redirects).forEach((key) => {
         const elements = document.querySelectorAll(key);
 
         elements.forEach((el) => {
+            // Options inside <select> don't reliably emit click events on real mobile UIs.
+            if (el.tagName === "OPTION") return;
+
             el.addEventListener("click", (e) => {
                 e.preventDefault();
 
