@@ -7,36 +7,49 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
-html,
 body {
+    position: relative;
+
     min-height: 100%;
     width: 100%;
     margin: 0;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.25), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.25), transparent 40%),
-        var(--gradient-main);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-body {
-    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
     gap: 1rem;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            var(--bg-glow-1),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            var(--bg-glow-2),
+            transparent 40%
+        ),
+        var(--gradient-main);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
     z-index: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
+
     pointer-events: none;
+
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+
+    background-size: 40px 40px;
 }
 
 main {

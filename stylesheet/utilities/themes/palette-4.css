@@ -21,5 +21,10 @@
 
     --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.35);
 
+    --bg-glow-1: rgba(168, 85, 247, 0.22);
+    --bg-glow-2: rgba(34, 211, 238, 0.18);
+
+    --grid-color: rgba(255, 255, 255, 0.05);
+
     --radius: 16px;
 }

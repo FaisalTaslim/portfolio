@@ -53,7 +53,11 @@ header {
     font-size: 0.69rem;
     font-weight: var(--fw-regular);
     border: 1px solid var(--text-muted);
-    border-radius: var(--radius);
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 .nav-links-property p i {font-size: 0.6rem;}
+.nav-links-property:hover {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
