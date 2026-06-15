@@ -1,4 +1,10 @@
 :root {
+    --btn-primary-bg: var(--gradient-accent);
+    --btn-secondary-bg: var(--primary);
+    --accent-rgb: 56, 189, 248;
+}
+
+:root {
     --bg-dark: #0b1f17;
     --bg-primary: #102a22;
     --bg-secondary: #14382d;
