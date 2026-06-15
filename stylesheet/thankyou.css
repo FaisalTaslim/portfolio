@@ -38,7 +38,13 @@ body::before {
         linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 40px 40px;
 }
-
+.gradient-text {
+    background: var(--gradient-text);     
+    -webkit-background-clip: text;       
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;                
+    color: transparent;                   
+}
 .thankyou-main {
     position: relative;
     z-index: 1;
@@ -102,6 +108,9 @@ body::before {
     opacity: 0;
     animation: reveal 0.4s ease forwards;
 }
+.final-thanks {
+    font-size: 0.7rem;
+}
 .line.cmd {
     color: var(--text-primary);
 }
@@ -140,30 +149,6 @@ body::before {
     .cursor {
         animation: none;
     }
-}
-
-/* Message text */
-.thankyou-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.8rem;
-}
-
-.thankyou-heading {
-    font-family: var(--font-heading);
-    font-weight: var(--fw-bold);
-    font-size: var(--font-subheading);
-}
-
-.thankyou-sub {
-    font-family: var(--font-body);
-    font-size: var(--font-caption);
-    font-weight: var(--fw-regular);
-    color: var(--text-secondary);
-    line-height: 1.6rem;
-    max-width: 36ch;
 }
 
 .back-link {
