@@ -62,6 +62,6 @@ form.addEventListener("submit", async (e) => {
   });
 
   if (response.ok) {
-    window.location.href = "/thank-you.html";
+    window.location.href = "/portfolio/thank-you.html";
   }
 });
