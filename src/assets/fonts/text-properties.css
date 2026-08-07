@@ -1,0 +1,44 @@
+h1 { font-size: var(--fs-heading); font-weight: var(--fw-bold); }
+h2 { font-size: var(--fs-subheading); font-weight: var(--fw-medium); }
+h3 { font-size: var(--fs-smallheading); font-weight: var(--fw-medium); }
+h4 { font-size: var(--fs-tinyheading); font-weight: var(--fw-medium); }
+
+p,
+span {
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-regular);
+    line-height: 1.9rem;
+}
+a {text-decoration: none;}
+a:hover {
+    color: var(--highlight);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+summary,
+caption {
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-regular);
+}
+
+ul {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.657rem;
+}
+summary:hover {cursor: pointer}
+button {font-size: var(--fs-caption); font-weight: var(--fw-medium)}
+
+:where(h1, h2, h3, h4, h5, h6, summary) {color: var(--text-primary)}
+:where(b, i) {color: var(--highlight)}
+:where(p, li, span) {color: var(--text-secondary)}
+:where(a) {color: var(--text-primary)}
+:where(code, pre, caption) {color: var(--text-secondary)}
+.override-paragraph {font-size: var(--fs-caption)}

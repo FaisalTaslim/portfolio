@@ -1,0 +1,141 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid var(--border);
+
+  span {
+    width: fit-content;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hello {
+    padding: 0.5rem;
+    border: 2px solid var(--border);
+    border-radius: 0.8rem;
+    font-weight: bold;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .left {
+    width: 65%;
+
+    .divide-words {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      h1 {
+        font-size: var(--fs-bigheading);
+        font-weight: 600;
+      }
+
+      h1:last-child {
+        background: var(--gradient-accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .pills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+  }
+
+  .right {
+    width: 35%;
+  }
+
+  .role {
+    p {
+      font-size: var(--fs-subheading)
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--bg-secondary);
+  }
+
+  @media screen and (max-width: 800px) {
+    & {
+      gap: 2rem;
+      .top {
+        flex-direction: column;
+        gap: 4rem;
+      }
+      .left {
+        width: 100%;
+        .divide-words {
+          gap: 0.5rem;
+
+          h1 {
+            flex: 0 1;
+            font-size: var(--fs-heading);
+          }
+        }
+
+        .role p {
+          font-size: var(--fs-smallheading);
+          text-align: justify;
+        }
+      }
+      .right {
+        width: 100%;
+        gap: 1rem;
+      }
+      .bottom {padding: 0.5rem;}
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1025px) {
+    & {
+      .top {
+        gap: 2rem;
+        .left {
+          .divide-words {
+            gap: 1rem;
+
+            h1 {
+              font-size: var(--fs-heading);
+            }
+          }
+        }
+      }
+      .bottom {padding: 0.5rem;}
+    }
+  }
+}

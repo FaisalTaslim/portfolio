@@ -1,0 +1,40 @@
+button {
+    border: none;
+    border-radius: 0.5rem;
+    
+    @media screen and (min-width: 365px) and (max-width: 468px) {
+        & {flex: 1 1 calc(50% - 1rem)}
+    }
+
+    @media screen and (min-width: 369px) and (max-width: 768px) {
+        & {flex: 1 1 calc(50% - 1rem)}
+    }
+}
+button:hover {
+    cursor: pointer;
+    background: var(--highlight);
+    border: 2px solid var(--highlight);
+    box-shadow: var(--shadow-glow);
+}
+button.active {
+    background: var(--highlight);
+    color: black;
+}
+button.deactivate {
+    background: transparent;
+    color: var(--text-secondary);
+}
+button.small {
+    padding: 0.5rem 0.5rem;
+    font-size: var(--fs-caption);
+}
+button.big {
+    padding: 0.5rem 0.8rem;
+    font-size: var(--fs-paragraph);
+    background: var(--bg-dark);
+    border: 2px solid var(--accent);
+}
+button.extrabig {
+    padding: 0.7rem 0.8rem;
+    font-size: var(--fs-paragraph);
+}

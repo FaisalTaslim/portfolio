@@ -1,0 +1,53 @@
+.capsule-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+
+    padding: 0.3rem 1rem;
+    border-radius: 0.8rem;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border, rgba(255, 255, 255, 0.08));
+
+    color: var(--text-secondary, #9a9aab);
+
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.capsule-text span {font-size: var(--fs-caption);}
+.capsule-text:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+.capsule-text .icon {
+    font-size: var(--fs-paragraph, 15px);
+    display: flex;
+    align-items: center;
+    
+    i {font-size: 1.3rem;}
+}
+.capsule-text .text {
+    white-space: nowrap;
+}
+
+.override {
+    border: none;
+    background: none;
+    padding: 0;
+
+    span {
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        background: var(--bg-dark);
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        font-size: var(--fs-caption);
+        box-shadow: var(--shadow-glow);
+    }
+}
+.override:hover {
+    cursor: pointer;
+    background: none;
+    border: none;
+}

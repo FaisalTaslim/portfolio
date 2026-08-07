@@ -1,0 +1,382 @@
+/* ==========================================================================
+   PREMIUM FORM SYSTEM
+   Drop this file in after your theme :root variables and it will style
+   any form automatically — no extra classes required (though a few
+   optional ones are supported for layout control, see bottom of file).
+
+   Expected structure (plain HTML, no special classes needed):
+
+   <form className="pform">
+     <div className="pform-field">
+       <label for="name">Name</label>
+       <input type="text" id="name" placeholder="Ada Lovelace" />
+     </div>
+     ...
+     <button type="submit">Send</button>
+   </form>
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. FORM CONTAINER — responsive grid, no media queries needed for basic use
+   -------------------------------------------------------------------------- */
+
+.pform {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px 20px;
+  width: 100%;
+  max-width: 640px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: var(--radius, 16px);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(var(--glass-blur, 18px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 18px));
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+/* A field that should always take the full row (e.g. message textarea) */
+.pform .pform-full,
+.pform textarea {
+  grid-column: 1 / -1;
+}
+
+/* Two-up field groups — wrap two .pform-field divs in this to force a pair,
+   otherwise auto-fit already handles wrapping responsively on its own */
+.pform-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .pform-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. FIELD WRAPPER
+   -------------------------------------------------------------------------- */
+
+.pform-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0; /* prevents grid blowout with long placeholder text */
+}
+
+.pform label,
+.pform .pform-field > label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+}
+
+.pform label .required {
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.pform .pform-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: -2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. INPUTS, TEXTAREA, SELECT
+   -------------------------------------------------------------------------- */
+
+.pform input,
+.pform textarea,
+.pform select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: calc(var(--radius, 16px) * 0.55);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.pform textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.pform input::placeholder,
+.pform textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.pform input:hover,
+.pform textarea:hover,
+.pform select:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.pform input:focus,
+.pform textarea:focus,
+.pform select:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.16), var(--shadow-glow);
+  background: var(--bg-secondary);
+}
+
+/* Custom select arrow, theme-colored */
+.pform select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.pform select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Disabled state */
+.pform input:disabled,
+.pform textarea:disabled,
+.pform select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   4. VALIDATION STATES
+   -------------------------------------------------------------------------- */
+
+.pform input.is-invalid,
+.pform textarea.is-invalid,
+.pform select.is-invalid {
+  border-color: var(--danger);
+}
+
+.pform input.is-invalid:focus,
+.pform textarea.is-invalid:focus,
+.pform select.is-invalid:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.16);
+}
+
+.pform input.is-valid,
+.pform textarea.is-valid,
+.pform select.is-valid {
+  border-color: var(--success);
+}
+
+.pform .pform-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+  margin-top: -2px;
+}
+
+/* --------------------------------------------------------------------------
+   5. CHECKBOXES & RADIOS
+   -------------------------------------------------------------------------- */
+
+.pform .pform-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.pform .pform-check label {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.pform input[type="checkbox"],
+.pform input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+}
+
+.pform input[type="checkbox"] {
+  border-radius: 5px;
+}
+
+.pform input[type="radio"] {
+  border-radius: 50%;
+}
+
+.pform input[type="checkbox"]:checked,
+.pform input[type="radio"]:checked {
+  border-color: var(--primary);
+  background: var(--gradient-accent);
+}
+
+.pform input[type="checkbox"]:checked::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.pform input[type="radio"]:checked::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+.pform input[type="checkbox"]:focus-visible,
+.pform input[type="radio"]:focus-visible {
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.16);
+}
+
+/* --------------------------------------------------------------------------
+   6. BUTTONS
+   -------------------------------------------------------------------------- */
+
+.pform button,
+.pform input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 13px 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--btn-primary-bg);
+  border: none;
+  border-radius: calc(var(--radius, 16px) * 0.55);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.pform button:hover,
+.pform input[type="submit"]:hover {
+  filter: brightness(1.08);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.pform button:active,
+.pform input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.pform button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Secondary button — add className="pform-btn-secondary" */
+.pform .pform-btn-secondary {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--border);
+}
+
+.pform .pform-btn-secondary:hover {
+  background: var(--btn-secondary-hover);
+  box-shadow: none;
+}
+
+/* Button row, keeps buttons inline on wide screens, stacked on narrow */
+.pform .pform-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.pform .pform-actions button {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. HEADINGS / MISC TEXT INSIDE FORM
+   -------------------------------------------------------------------------- */
+
+.pform h1,
+.pform h2,
+.pform h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: var(--text-primary);
+}
+
+.pform p {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.pform .pform-divider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--divider);
+  border: none;
+  margin: 4px 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE FINE-TUNING
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .pform {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+    border-radius: calc(var(--radius, 16px) * 0.75);
+  }
+
+  .pform button,
+  .pform input[type="submit"] {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .pform .pform-actions {
+    flex-direction: column;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .pform *,
+  .pform *::before,
+  .pform *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
