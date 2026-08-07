@@ -16,7 +16,7 @@ export const aboutHeaderCardsData = [
     },
 ];
 export const aboutExperienceCardsData = [
-    { data: "1", caption: "Year of Experience" },
+    { data: "1+", caption: "Years of Building" },
     { data: "3", caption: "Projects (including this portfolio)" },
     { data: "12+", caption: "Technologies" },
     { data: "0", caption: "Clients" },
@@ -31,7 +31,7 @@ export const skillsAdditionalCardsData = [
     { 
         icon: "fa-solid fa-rocket", 
         heading: "Problem Solving", 
-        description: "Analytical skills to breaek down complex problems into simple solutions",
+        description: "Analytical skills to break down complex problems into simple solutions",
     },
     {
         icon: "fa-solid fa-gauge",
@@ -41,7 +41,7 @@ export const skillsAdditionalCardsData = [
     {
         icon: "fa-solid fa-mobile-screen",
         heading: "Responsive Design",
-        description: "Creating modern, responsive interfaces that works seamlessly across all devices",
+        description: "Creating modern, responsive interfaces that work seamlessly across all devices",
     },
     {
         icon: "fa-solid fa-code",
