@@ -93,7 +93,7 @@ function Contact() {
       </div>
       <div className="socials">
         <div className="socials-left">
-          <h3>Let's connect on</h3>
+          <h3>Let's connect</h3>
           <p>Find me on these platforms</p>
         </div>
 
