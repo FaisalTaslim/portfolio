@@ -32,7 +32,7 @@ function Contact() {
             ))}
           </div>
         </div>
-        <div className="contact-form">
+        <div className="contact-form" data-aos="fade-up">
           <HeaderCard
             icon="fa-regular fa-file"
             heading="Send Me a Message"

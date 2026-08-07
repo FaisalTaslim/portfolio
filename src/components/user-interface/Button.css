@@ -17,7 +17,8 @@ button:hover {
     box-shadow: var(--shadow-glow);
 }
 button.active {
-    background: var(--highlight);
+    background: var(--accent);
+    box-shadow: var(--shadow-glow);
     color: black;
 }
 button.deactivate {

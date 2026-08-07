@@ -46,6 +46,19 @@ header {
     & button:first-child {
       border-radius: 1.5rem;
     }
+    .fa-moon,
+    .fa-sun {
+      padding: 1rem;
+      border-radius: 1.5rem;
+      color: var(--accent);
+      cursor: pointer;
+      border: 2px solid var(--border);
+
+      &:hover {
+        border: 2px solid var(--accent);
+        box-shadow: var(--shadow-glow);
+      }
+    }
   }
 
   .hamburger-menu {

@@ -13,7 +13,7 @@
         flex-wrap: wrap;
 
         .skills-highlight-header {
-            color: var(--accent)
+            color: var(--highlight)
         }
     }
     .technical-skills-heading {

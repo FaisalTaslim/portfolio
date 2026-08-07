@@ -16,9 +16,9 @@ export const aboutHeaderCardsData = [
     },
 ];
 export const aboutExperienceCardsData = [
-    { data: "2+", caption: "Year of Experience" },
-    { data: "1+", caption: "Projects" },
-    { data: "6+", caption: "Technologies" },
+    { data: "1", caption: "Year of Experience" },
+    { data: "3", caption: "Projects (including this portfolio)" },
+    { data: "12+", caption: "Technologies" },
     { data: "0", caption: "Clients" },
 ];
 export const skillsTechnicalCardsData = [

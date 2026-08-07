@@ -35,7 +35,6 @@
 
       .subheading {
         font-size: var(--fs-caption);
-        color: var(--text-secondary);
       }
     }
     span:first-child {font-weight: bold;}

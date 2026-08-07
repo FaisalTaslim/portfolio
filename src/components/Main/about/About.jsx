@@ -31,8 +31,7 @@ function About() {
             <p>Full-Stack Developer</p>
           </div>
           <p id="about-myself">
-            I build scalable, performant, and user-friendly web applications
-            that solve real-world problems and deliver exceptional experience.
+            I build full-stack web applications with React, Node.js and MongoDB, focusing on performance, usability and solving real-world problems.
           </p>
           <div className="pills">
             {aboutSkillsData.map((pill) => {
