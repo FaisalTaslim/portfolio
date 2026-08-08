@@ -45,7 +45,7 @@ function Header() {
         />
         <div className="theme-change-icons">
           <i
-            className="fa-regular fa-moon"
+            class="fa-solid fa-cloud-sun"
             style={{ display: activeTheme === "dark" ? "none" : "block" }}
             onClick={() => setTheme("dark")}
           ></i>

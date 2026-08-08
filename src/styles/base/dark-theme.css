@@ -82,7 +82,7 @@
   --text-secondary: #334155;
   --text-muted: #64748b;
 
-  --border: black;
+  --border: rgba(10, 10, 20, 0.15);
   --glass: rgba(255, 255, 255, 0.7);
 
   --gradient-main: linear-gradient(180deg,
