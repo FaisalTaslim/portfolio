@@ -19,7 +19,7 @@ export const aboutExperienceCardsData = [
     { data: "1+", caption: "Years of Building" },
     { data: "3", caption: "Projects (including this portfolio)" },
     { data: "12+", caption: "Technologies" },
-    { data: "0", caption: "Clients" },
+    { data: `${236 + 9 + 16 + 9}`, caption: "Total Commits" },
 ];
 export const skillsTechnicalCardsData = [
     { icon: "fa-solid fa-code", heading: "Frontend", list: ['HTML', 'CSS', 'JavaScript', 'React']},
