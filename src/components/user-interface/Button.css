@@ -1,4 +1,4 @@
-button {
+button, a {
     border: none;
     border-radius: 0.5rem;
     
@@ -10,32 +10,38 @@ button {
         & {flex: 1 1 calc(50% - 1rem)}
     }
 }
-button:hover {
+button:hover,
+a:hover {
     cursor: pointer;
     background: var(--highlight);
     border: 2px solid var(--highlight);
     box-shadow: var(--shadow-glow);
 }
-button.active {
+button.active,
+a.active {
     background: var(--accent);
     box-shadow: var(--shadow-glow);
     color: black;
 }
-button.deactivate {
+button.deactivate,
+a.deactive {
     background: transparent;
     color: var(--text-secondary);
 }
-button.small {
+button.small,
+a.small {
     padding: 0.5rem 0.5rem;
     font-size: var(--fs-caption);
 }
-button.big {
+button.big,
+a.big {
     padding: 0.5rem 0.8rem;
     font-size: var(--fs-paragraph);
     background: var(--bg-dark);
     border: 2px solid var(--accent);
 }
-button.extrabig {
+button.extrabig,
+a.extrabig {
     padding: 0.7rem 0.8rem;
     font-size: var(--fs-paragraph);
 }

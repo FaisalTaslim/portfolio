@@ -9,7 +9,7 @@ import "./Contact.css";
 function Contact() {
   return (
     <>
-      <div className="contact-container">
+      <div className="contact-container" id="contacts">
         <div className="contact contact-item" data-aos="fade-up">
           <CapsuleText text="— GET IN TOUCH" override={true} />
           <div className="divide-headers">

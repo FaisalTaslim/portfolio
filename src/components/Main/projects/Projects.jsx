@@ -34,7 +34,7 @@ function Projects() {
     ];
 
     return (
-        <div className="projects" data-aos="fade-up">
+        <div className="projects" data-aos="fade-up" id="projects">
             <CapsuleText text="— MY WORK" override={true}/>
             <div className="divide-headers">
                 <h2>Projects That</h2>

@@ -7,7 +7,7 @@ import AdditionalSkillsCard from "../../user-interface/cards/AdditionalSkills.js
 
 function Skills() {
   return (
-    <div className="skills" data-aos="fade-up">
+    <div className="skills" data-aos="fade-up" id="skills">
       <CapsuleText text="— MY SKILLS" override={true} />
       <div className="divide-headers">
         <h2>Skills That</h2>

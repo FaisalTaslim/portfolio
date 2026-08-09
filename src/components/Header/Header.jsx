@@ -30,7 +30,8 @@ function Header() {
               text={button.text}
               status={activeButton === button.text ? "active" : "deactivate"}
               size={button.size}
-              onClick={() => setActiveButton(button.text)}
+              onClick={() => {setActiveButton(button.text);}}
+              link={button.link}
             />
           );
         })}
