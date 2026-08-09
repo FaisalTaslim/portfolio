@@ -10,10 +10,10 @@ import "../../user-interface/Capsule-Text.css";
 import "../../user-interface/cards/Card.css";
 import "./About.css";
 
-import {aboutButtonsData} from "../../../data/button-data.js";
-import {aboutHeaderCardsData} from "../../../data/card-data.js";
-import {aboutExperienceCardsData} from "../../../data/card-data.js";
-import {aboutSkillsData} from "../../../data/capsule-text-data.js";
+import { aboutButtonsData } from "../../../data/button-data.js";
+import { aboutHeaderCardsData } from "../../../data/card-data.js";
+import { aboutExperienceCardsData } from "../../../data/card-data.js";
+import { aboutSkillsData } from "../../../data/capsule-text-data.js";
 
 function About() {
   const [activeButton, setActiveButton] = useState("View My Work");
@@ -22,7 +22,7 @@ function About() {
     <div className="about" id="about">
       <div className="top">
         <div className="left">
-          <span className="hello">Hello, I am</span>
+          <CapsuleText text="Hello, I am," override={true} glow="no-glow"/>
           <div className="divide-words">
             <h1>Faisal</h1>
             <h1>Taslim</h1>
@@ -31,7 +31,8 @@ function About() {
             <p>Full-Stack Developer</p>
           </div>
           <p id="about-myself">
-            I build full-stack web applications with React, Node.js and MongoDB, focusing on performance, usability and solving real-world problems.
+            I build full-stack web applications with React, Node.js and MongoDB,
+            focusing on performance, usability and solving real-world problems.
           </p>
           <div className="pills">
             {aboutSkillsData.map((pill) => {
@@ -54,11 +55,20 @@ function About() {
                     activeButton === button.text ? "active" : "deactivate"
                   }
                   size={button.size}
-                  onClick={() => setActiveButton(button.text)}
+                  onClick={() => {
+                    setActiveButton(button.text);
+                    if (button.text === "Download Resume") {
+                      window.open(
+                        `${import.meta.env.BASE_URL}Resume.pdf`,
+                        "_blank",
+                      );
+                    }
+                  }}
                 />
               );
             })}
           </div>
+          <CapsuleText text="Developed using React" override={true}/>
         </div>
         <div className="right">
           {aboutHeaderCardsData.map((card) => {

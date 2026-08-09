@@ -16,14 +16,6 @@
     align-items: center;
     gap: 1rem;
   }
-
-  .hello {
-    padding: 0.5rem;
-    border: 2px solid var(--border);
-    border-radius: 0.8rem;
-    font-weight: bold;
-  }
-
   .left,
   .right {
     display: flex;

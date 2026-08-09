@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Header.css";
 import Button from "../user-interface/Button.jsx";
 import { navButtonsData } from "../../data/button-data.js";
+import resume from "../../../public/Resume.pdf";
 
 function Header() {
   const [activeButton, setActiveButton] = useState("Home");
@@ -37,15 +38,17 @@ function Header() {
 
       <div className="right-side">
         <Button
-          key={"Resume"}
+          key="Resume"
           text="Resume"
           status="deactivate"
           size="big"
-          onClick={() => setActiveButton("Resume")}
+          onClick={() => {
+            window.open(`${import.meta.env.BASE_URL}Resume.pdf`, "_blank");
+          }}
         />
         <div className="theme-change-icons">
           <i
-            class="fa-solid fa-cloud-sun"
+            className="fa-solid fa-cloud-sun"
             style={{ display: activeTheme === "dark" ? "none" : "block" }}
             onClick={() => setTheme("dark")}
           ></i>

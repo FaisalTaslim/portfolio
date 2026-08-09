@@ -54,3 +54,10 @@
     background: none;
     border: none;
 }
+.no-glow {
+    span {
+        box-shadow: none;
+        border: 2px solid var(--highlight);
+        color: var(--highlight);
+    }
+}
