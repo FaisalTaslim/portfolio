@@ -124,6 +124,7 @@
     cursor: pointer;
     box-shadow: var(--shadow-glow);
   }
+  .projectNote {font-size: var(--fs-verysmall)};
 }
 
 .skills-card {

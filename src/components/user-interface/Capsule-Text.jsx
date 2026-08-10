@@ -1,8 +1,8 @@
 import "./Capsule-Text.css";
 
-function CapsuleText({ icon, text, color, link, glow, override }) {
+function CapsuleText({ icon, text, color, link, glow, override, onClick }) {
   return (
-    <div className={`capsule-text ${override ? "override" : ""} ${glow ? "no-glow": ""}`}>
+    <div className={`capsule-text ${override ? "override" : ""} ${glow ? "no-glow": ""}`} onClick={onClick}>
       {icon && (
         <span className="icon" style={{ color: color || "var(--accent)" }}>
           <i className={icon}></i>
