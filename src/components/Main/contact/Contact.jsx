@@ -100,29 +100,19 @@ function Contact() {
         <div className="divider"></div>
 
         <div className="socials-right">
-          <a href="#" className="social-btn">
+          <a href="https://github.com/FaisalTaslim" className="social-btn">
             <i className="fa-brands fa-github"></i>
             <span>GitHub</span>
           </a>
 
-          <a href="#" className="social-btn">
+          <a href="https://www.linkedin.com/in/faisal-taslim-026868395/" className="social-btn">
             <i className="fa-brands fa-linkedin"></i>
             <span>LinkedIn</span>
           </a>
 
-          <a href="#" className="social-btn">
-            <i className="fa-brands fa-x-twitter"></i>
-            <span>Twitter</span>
-          </a>
-
-          <a href="#" className="social-btn">
+          <a href="https://www.instagram.com/_faisal_9542/" className="social-btn">
             <i className="fa-brands fa-instagram"></i>
             <span>Instagram</span>
-          </a>
-
-          <a href="#" className="social-btn">
-            <i className="fa-regular fa-envelope"></i>
-            <span>Email</span>
           </a>
         </div>
       </div>
