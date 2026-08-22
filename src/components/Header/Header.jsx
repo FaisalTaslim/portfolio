@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./Header.css";
 import Button from "../user-interface/Button.jsx";
 import { navButtonsData } from "../../data/button-data.js";
-import resume from "../../../public/Resume.pdf";
 
 function Header() {
   const [activeButton, setActiveButton] = useState("Home");

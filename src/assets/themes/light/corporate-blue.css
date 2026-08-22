@@ -1,0 +1,65 @@
+:root[data-theme="light"] {
+  --btn-primary-bg: var(--gradient-accent);
+  --btn-secondary-bg: var(--primary);
+  --btn-primary-hover: var(--secondary);
+  --btn-secondary-hover: var(--bg-secondary);
+
+  --accent-rgb: 14, 165, 233;
+
+  --bg-dark: #ffffff;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5fa;
+
+  --primary: #6c5ce7;
+  --secondary: #8b7cf6;
+
+  --accent: #0ea5e9;
+  --highlight: #2563eb;
+
+  --text-primary: #14141c;
+  --text-secondary: #45455a;
+  --text-muted: #74748a;
+
+  --border: rgba(20, 20, 30, 0.08);
+  --glass: rgba(20, 20, 30, 0.02);
+
+  --gradient-main: linear-gradient(180deg,
+    #ffffff 0%,
+    #f5f5fa 100%);
+  --gradient-accent: linear-gradient(135deg,
+    #6c5ce7 0%,
+    #2563eb 55%,
+    #0ea5e9 100%);
+  --gradient-text: linear-gradient(90deg,
+    #14141c,
+    #2563eb,
+    #0ea5e9);
+
+  --shadow-glow: 0 0 45px rgba(14, 165, 233, 0.25);
+  --shadow-card: 0 10px 30px rgba(20, 20, 30, 0.08);
+  --shadow-soft: 0 4px 14px rgba(20, 20, 30, 0.06);
+
+  --grid-color: rgba(20, 20, 30, 0.05);
+  --card-bg: rgba(20, 20, 30, 0.02);
+  --card-hover: rgba(20, 20, 30, 0.045);
+
+  --nav-bg: rgba(255, 255, 255, 0.75);
+  --nav-border: rgba(20, 20, 30, 0.08);
+
+  --input-bg: #ffffff;
+  --input-border: rgba(20, 20, 30, 0.12);
+  --input-focus: #2563eb;
+
+  --divider: rgba(20, 20, 30, 0.06);
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+
+  --purple-glow: rgba(108, 92, 231, 0.18);
+  --blue-glow: rgba(37, 99, 235, 0.16);
+  --cyan-glow: rgba(14, 165, 233, 0.14);
+
+  --radius: 16px;
+  --glass-blur: 18px;
+}
