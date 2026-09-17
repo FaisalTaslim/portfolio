@@ -31,7 +31,7 @@ export const projectdata = [
     about:
       "Bytes of Life is a modern digital journaling application built with React. It is designed to provide a clean and distraction-free space for capturing thoughts, memories, and daily experiences. The project focuses on intuitive UI, responsive design, and will later include features such as authentication, rich-text journaling, and cloud synchronization.",
     stacks: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    status: "In Progress",
+    status: "In Progress - On Hold",
     demoStatus: "Recently started. Demo unavailable.",
     color: "var(--warning)",
     pillicon1: "fa-solid fa-square-arrow-up-right",
@@ -46,8 +46,8 @@ export const projectdata = [
     about:
       "FayUI is a personal React component library built around reusable components, utility classes, and design tokens. It is designed to make building clean, flexible, and consistent interfaces faster without starting from scratch every time. The project focuses on composability, responsive design, customizable styling, and a practical developer experience.",
     stacks: ["React.js", "JavaScript", "CSS"],
-    status: "60% completed & working. WIP",
-    demoStatus: "Live at https://faisaltaslim.github.io/FayUI/",
+    status: "In Progress - Active progression",
+    demoStatus: "Live at https://fayui.vercel.app/",
     color: "var(--success)",
     pillicon1: "fa-solid fa-square-arrow-up-right",
     pillicon2: "fa-brands fa-github",
